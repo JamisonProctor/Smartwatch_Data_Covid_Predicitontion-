@@ -36,14 +36,9 @@ Due to time limitations we were only able to generate predictions using the fini
 
 In parallel, we did exploratory data analysis on some of the user’s individual datasets. Jamison tried to create a heart rate baseline by finding the minimum heart rate for each day and taking the mean of the neighboring heart rate data and comparing that day to day. 
 
-Local Outlier Factor / LOF (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/lof.html#LOF), 
-Median Absolute Deviation / MAD (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/mad.html) and 
-Isolation Forest/IForest (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/iforest.html#IForest) 
-
-algos from PyOD were used to identify outlier data, but it was only able to identify once symptoms were already present. 
+Local Outlier Factor / LOF, Median Absolute Deviation / MAD and Isolation Forest/IForest algos from PyOD were used to identify outlier data, but they were only able to identify once symptoms were already present. 
 
 We pivoted our approach to re-using the pretrained models provided. We clustered all of the users according to their HR data, then extrapolated which models best represented which cluster. Our plan was to then use an ensemble of the most representative models to make predictions for any user which did not have a pre-trained model. But we ran out of time. 
-
 
 ### UX and UI
 
@@ -69,5 +64,11 @@ GitHub repo for the LAAD implementation we wanted to use: https://github.com/gir
 LAAD in general: https://arxiv.org/abs/1607.00148
 
 Phase-2 study, where the NightSignal algorithm is from: https://www.nature.com/articles/s41591-021-01593-2
+
+Local Outlier Factor / LOF (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/lof.html#LOF), 
+
+Median Absolute Deviation / MAD (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/mad.html)
+
+Isolation Forest/IForest (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/iforest.html#IForest) 
 
 

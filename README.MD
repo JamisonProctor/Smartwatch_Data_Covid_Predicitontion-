@@ -38,9 +38,9 @@ In parallel, we did exploratory data analysis on some of the user’s individual
 
 Local Outlier Factor / LOF (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/lof.html#LOF), 
 Median Absolute Deviation / MAD (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/mad.html) and 
-Isolation Forest/IForest (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/iforest.html#IForest) algos from PyOD 
+Isolation Forest/IForest (https://pyod.readthedocs.io/en/latest/_modules/pyod/models/iforest.html#IForest) 
 
-were used to identify outlier data, but it was only able to identify once symptoms were already present. 
+algos from PyOD were used to identify outlier data, but it was only able to identify once symptoms were already present. 
 
 We pivoted our approach to re-using the pretrained models provided. We clustered all of the users according to their HR data, then extrapolated which models best represented which cluster. Our plan was to then use an ensemble of the most representative models to make predictions for any user which did not have a pre-trained model. But we ran out of time. 
 
